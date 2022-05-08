@@ -6,6 +6,7 @@ import { AntdResolve, createStyleImportPlugin } from "vite-plugin-style-import";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  envPrefix: "REACT_APP_",
   plugins: [
     react(),
     visualizer(),

@@ -699,6 +699,13 @@
     "@typescript-eslint/types" "5.22.0"
     eslint-visitor-keys "^3.0.0"
 
+"@verg/auth@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@verg/auth/-/auth-1.0.2.tgz#173c76e36078df27b3c69dbb24552ed40d399099"
+  integrity sha512-zXeYZa/8kxujVDD9p79QM8mTPWS/ET/j9qcHPKjqYy1HO7Y0vkBy8RM7xshJUFWUTDouLEDuRgXnShIz0eHO/A==
+  dependencies:
+    keycloak-js "^17.0.1"
+
 "@verg/eslint-config-react@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@verg/eslint-config-react/-/eslint-config-react-1.0.1.tgz#583e17010150bff59fc8602c27e2e957ee2068bb"
@@ -1000,6 +1007,11 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+base64-js@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
+  integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -2517,6 +2529,11 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
+js-sha256@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/js-sha256/-/js-sha256-0.9.0.tgz#0b89ac166583e91ef9123644bd3c5334ce9d0966"
+  integrity sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -2589,6 +2606,14 @@ jsonparse@^1.2.0:
   dependencies:
     array-includes "^3.1.4"
     object.assign "^4.1.2"
+
+keycloak-js@^17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-17.0.1.tgz#403ea75b3e938ddc780f99ecbd73e1b6905f826f"
+  integrity sha512-mbLBSoogCBX5VYeKCdEz8BaRWVL9twzSqArRU3Mo3Z7vEO1mghGZJ5IzREfiMEi7kTUZtk5i9mu+Yc0koGkK6g==
+  dependencies:
+    base64-js "^1.5.1"
+    js-sha256 "^0.9.0"
 
 kind-of@^6.0.3:
   version "6.0.3"
