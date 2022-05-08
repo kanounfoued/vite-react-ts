@@ -10,10 +10,16 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "@sentry/react": "^6.19.7",
+    "@tanstack/react-location": "^3.7.4",
+    "@tanstack/react-location-devtools": "^3.4.4",
+    "@verg/api-service": "^1.0.7",
     "@verg/auth": "^1.0.2",
     "antd": "^4.20.2",
+    "axios": "^0.27.2",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-query": "^3.39.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
