@@ -10,6 +10,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "@verg/auth": "^1.0.2",
     "antd": "^4.20.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
