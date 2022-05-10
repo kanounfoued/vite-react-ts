@@ -1,27 +1,48 @@
-import { defineConfig, loadEnv } from "vite";
+// eslint-disable-next-line import/no-unresolved
 import react from "@vitejs/plugin-react";
-import { visualizer } from "rollup-plugin-visualizer";
+import path from "path";
+import visualizer from "rollup-plugin-visualizer";
+import { defineConfig } from "vite";
+import checker from "vite-plugin-checker";
 import vitePluginImp from "vite-plugin-imp";
 import { AntdResolve, createStyleImportPlugin } from "vite-plugin-style-import";
+import tsconfigPaths from "vite-tsconfig-paths";
+// import { antdThemeVariables } from "./src/styles/antd/antdThemeVariables";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   envPrefix: "REACT_APP_",
   plugins: [
     react(),
-    visualizer(),
-    // import component library styles on demand
+    tsconfigPaths(),
+    checker({
+      eslint: {
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
+      typescript: true,
+    }),
+    visualizer({
+      gzipSize: true,
+    }),
     createStyleImportPlugin({
       resolves: [AntdResolve()],
     }),
-    // import UI component library styles automatic
     vitePluginImp({ exclude: ["antd"] }),
   ],
-
-  // This is a special config only when using antd
+  build: {
+    outDir: "build",
+  },
+  resolve: {
+    alias: {
+      styles: path.resolve(__dirname, "./src/styles"),
+    },
+  },
+  preview: {
+    port: 3000,
+  },
   css: {
     preprocessorOptions: {
       less: {
+        // modifyVars: antdThemeVariables,
         javascriptEnabled: true,
       },
     },
