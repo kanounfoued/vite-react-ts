@@ -1,3 +1,4 @@
+import { Asset } from "./../../models/asset.model";
 import { VertApiEntity } from "@verg/api-service";
 import { ENTITIES } from "../../models/entities.model";
 import { VertApiServiceModel } from "../../models/api.model";
@@ -11,6 +12,7 @@ export default class Entities {
   area: VertApiEntityModel<Area>;
   user: VertApiEntityModel<User>;
   unit: VertApiEntityModel<Unit>;
+  asset: VertApiEntityModel<Asset>;
 
   constructor({ vertApiInstance }: { vertApiInstance: VertApiServiceModel }) {
     this.area = new VertApiEntity({
@@ -26,6 +28,11 @@ export default class Entities {
     this.unit = new VertApiEntity({
       vertApiInstance,
       entity: ENTITIES.UNIT,
+    });
+
+    this.asset = new VertApiEntity({
+      vertApiInstance,
+      entity: ENTITIES.ASSET,
     });
   }
 }
