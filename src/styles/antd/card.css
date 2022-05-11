@@ -1,0 +1,26 @@
+.ant-card.ant-card-bordered {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 8px;
+  box-shadow: theme("boxShadow.sm");
+}
+
+.ant-card.ant-card-bordered .ant-card-head {
+  border-bottom: unset;
+}
+
+.ant-card.ant-card-bordered .ant-card-head-title {
+  padding: 10px 0 12px 0;
+}
+
+.ant-card.ant-card-bordered .ant-card-loading-content {
+  padding: 20px;
+}
+
+.ant-card.ant-card-bordered > .ant-card-body {
+  flex: 1;
+  overflow: auto;
+  padding: 8px;
+}

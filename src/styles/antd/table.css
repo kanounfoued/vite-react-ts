@@ -1,0 +1,16 @@
+.ant-table-wrapper {
+  border-radius: 5px;
+}
+
+.ant-table-wrapper > .ant-table-row:nth-child(even) {
+  background: theme("colors.gray.50");
+}
+
+td.ant-table-column-sort {
+  background: unset !important;
+}
+
+.ant-table-tbody .ant-table-cell {
+  color: theme("colors.slate.600");
+  font-weight: 400;
+}
