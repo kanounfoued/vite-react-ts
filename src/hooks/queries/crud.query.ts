@@ -1,7 +1,7 @@
-import { ENTITIES } from "../../models/entities.model";
 import { useMutation, useQuery, useQueryClient } from "react-query";
 import Api from "../../services/api/api.service";
 import ReactQueryUtil from "../../utils/reactQuery.util";
+import { ENTITIES } from "../../models/entities.model";
 
 export function useEntities<T>(entity: ENTITIES) {
   const query = useQuery([entity], () => Api.base.getEntities<T>({ entity }));
