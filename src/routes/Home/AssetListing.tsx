@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { VERG_SORT_ORDER } from "@verg/api-service";
-import { useAssets } from "../../hooks/queries/asset.query";
-import { AssetFilters } from "../../models/filter.model";
 import { Card, Table, Space, Button } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+// import { DownOutlined } from "@ant-design/icons";
+// import { VERG_SORT_ORDER } from "@verg/api-service";
+// import { useAssets } from "../../hooks/queries/asset.query";
 import TableUtil from "../../utils/table.util";
-import { Asset } from "../../models/asset.model";
 import {
   useAddEntity,
   useDeleteEntity,
   useEntities,
   useUpdateEntity,
 } from "../../hooks/queries/crud.query";
+import { AssetFilters } from "../../models/filter.model";
+import { Asset } from "../../models/asset.model";
 import { ENTITIES } from "../../models/entities.model";
 
 type Props = {

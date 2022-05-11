@@ -1,10 +1,11 @@
 import Auth from "@verg/auth";
+import env from "../env";
 
 const auth = new Auth({
   keycloakConfig: {
-    realm: import.meta.env.REACT_APP_KEYCLOAK_REALM_ID,
-    url: import.meta.env.REACT_APP_KEYCLOAK_REALM_URL,
-    clientId: import.meta.env.REACT_APP_KEYCLOAK_REALM_CLIENT_ID,
+    realm: env.REACT_APP_KEYCLOAK_REALM_ID,
+    url: env.REACT_APP_KEYCLOAK_REALM_URL,
+    clientId: env.REACT_APP_KEYCLOAK_REALM_CLIENT_ID,
   },
 });
 
