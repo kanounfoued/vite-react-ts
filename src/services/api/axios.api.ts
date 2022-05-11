@@ -1,9 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosError } from "axios";
+import env from "../../env";
 import auth from "../auth.service";
-
-const axiosInstance = axios.create({
-  baseURL: import.meta.env.REACT_APP_API_URL,
-});
 
 function requestHandler(
   request: AxiosRequestConfig
@@ -26,6 +23,10 @@ function requestHandler(
 function responseErrorHandler(error: AxiosError) {
   return Promise.reject(error);
 }
+
+const axiosInstance = axios.create({
+  baseURL: env.REACT_APP_API_URL,
+});
 
 axiosInstance.interceptors.request.use(requestHandler, responseErrorHandler);
 

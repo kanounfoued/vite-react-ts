@@ -1,6 +1,6 @@
 import { VertApiService } from "@verg/api-service";
-import { VertApiServiceModel } from "./../../models/api.model";
 import { AxiosInstance } from "axios";
+import { VertApiServiceModel } from "../../models/api.model";
 import axiosInstanceCreated from "./axios.api";
 import Entities from "./entities.api";
 

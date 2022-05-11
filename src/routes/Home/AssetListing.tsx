@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { VERG_SORT_ORDER } from "@verg/api-service";
-import { useAssets } from "../../hooks/queries/asset.query";
-import { AssetFilters } from "../../models/filter.model";
 import { Card, Table, Space, Button } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+// import { DownOutlined } from "@ant-design/icons";
+// import { VERG_SORT_ORDER } from "@verg/api-service";
+// import { useAssets } from "../../hooks/queries/asset.query";
 import TableUtil from "../../utils/table.util";
-import { Asset } from "../../models/asset.model";
 import {
   useAddEntity,
   useDeleteEntity,
   useEntities,
   useUpdateEntity,
 } from "../../hooks/queries/crud.query";
+import { AssetFilters } from "../../models/filter.model";
+import { Asset } from "../../models/asset.model";
 import { ENTITIES } from "../../models/entities.model";
 
 type Props = {
@@ -56,12 +56,6 @@ export default function AssetListing({ filters }: Props) {
   const { mutate: mutateDelete } = useDeleteEntity(ENTITIES.ASSET);
   const { mutate: mutateUpdate } = useUpdateEntity(ENTITIES.ASSET);
 
-  const tabelColumns = TableUtil.columnsFromFieldsDetail(fieldsDetail).map(
-    (item) => {
-      return item;
-    }
-  );
-
   function onAdd(asset: Asset) {
     muatteAdd(asset);
   }
@@ -85,36 +79,34 @@ export default function AssetListing({ filters }: Props) {
             title: "Action",
             key: "action",
             sorter: true,
-            render: (props) => {
-              return (
-                <Space size="middle">
-                  <Button
-                    onClick={() =>
-                      onAdd({
-                        code: "1",
-                        name: "Asset 4",
-                      } as Asset)
-                    }
-                  >
-                    add
-                  </Button>
-                  <Button
-                    onClick={() => {
-                      onDelete(props.id);
-                    }}
-                  >
-                    delete
-                  </Button>
-                  <Button
-                    onClick={() =>
-                      onEdit({ ...props, name: "Asset 3", code: "3" })
-                    }
-                  >
-                    edit
-                  </Button>
-                </Space>
-              );
-            },
+            render: (rowProps) => (
+              <Space size="middle">
+                <Button
+                  onClick={() =>
+                    onAdd({
+                      code: "1",
+                      name: "Asset 4",
+                    } as Asset)
+                  }
+                >
+                  add
+                </Button>
+                <Button
+                  onClick={() => {
+                    onDelete(rowProps.id);
+                  }}
+                >
+                  delete
+                </Button>
+                <Button
+                  onClick={() =>
+                    onEdit({ ...rowProps, name: "Asset 3", code: "3" })
+                  }
+                >
+                  edit
+                </Button>
+              </Space>
+            ),
           },
         ]}
         dataSource={assets}

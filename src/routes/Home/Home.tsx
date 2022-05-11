@@ -1,10 +1,10 @@
 import { useState } from "react";
-
 import { Row } from "antd";
-import { AssetFilters } from "../../models/filter.model";
 import AssetListing from "./AssetListing";
+import { AssetFilters } from "../../models/filter.model";
 
 export default function Home() {
+  // eslint-disable-next-line
   const [filters, setFilters] = useState<{ [key: string]: AssetFilters }>({});
 
   return (
