@@ -1,5 +1,5 @@
 {
-  "name": "app-builder-fe",
+  "name": "vite-react-ts",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -10,31 +10,19 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "@sentry/react": "^6.19.7",
-    "@tanstack/react-location": "^3.7.4",
-    "@tanstack/react-location-devtools": "^3.4.4",
-    "@verg/api-service": "^1.0.7",
-    "@verg/auth": "^1.0.2",
-    "antd": "^4.20.2",
-    "axios": "^0.27.2",
-    "dayjs": "^1.11.2",
-    "lodash": "^4.17.21",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-query": "^3.39.0"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
-    "@types/lodash": "^4.14.182",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "@types/tailwindcss": "^3.0.10",
-    "@verg/eslint-config-react": "^1.0.1",
     "@vitejs/plugin-react": "^1.3.0",
     "autoprefixer": "^10.4.7",
     "consola": "^2.15.3",
     "eslint": "^8.14.0",
+    "eslint-config-react-app": "^7.0.1",
     "husky": "^7.0.4",
     "less": "^4.1.2",
     "lint-staged": "^12.4.1",
